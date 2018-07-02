@@ -132,6 +132,16 @@ module Datadog
     SET_TYPE = 's'.freeze
     VERSION = "3.3.0".freeze
 
+    NEW_LINE = "\n".freeze
+    ESC_NEW_LINE = "\\n".freeze
+    COMMA = ",".freeze
+    PIPE = "|".freeze
+    DOT = ".".freeze
+    DOUBLE_COLON = "::".freeze
+    UNDERSCORE = "_".freeze
+    PROCESS_TIME_SUPPORTED = false
+    EMPTY_OPTIONS = {}.freeze
+
     # A namespace to prepend to all statsd calls. Defaults to no namespace.
     attr_reader :namespace
 
@@ -376,19 +386,6 @@ module Datadog
     end
 
     private
-
-    NEW_LINE = "\n"
-    ESC_NEW_LINE = "\\n"
-    COMMA = ","
-    PIPE = "|"
-    DOT = "."
-    DOUBLE_COLON = "::"
-    UNDERSCORE = "_"
-    PROCESS_TIME_SUPPORTED = false
-    EMPTY_OPTIONS = {}
-
-    constant :NEW_LINE, :ESC_NEW_LINE, :COMMA, :PIPE, :DOT,
-      :DOUBLE_COLON, :UNDERSCORE, :EMPTY_OPTIONS
 
     def format_service_check(name, status, opts=EMPTY_OPTIONS)
       sc_string = "_sc|#{name}|#{status}".dup
