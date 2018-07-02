@@ -1,4 +1,6 @@
 
+Forked from Datadog/dogstatsd-ruby to add support for ruby-1.8 back in. Do not use this repo unless you're integrating it with a ruby-1.8 based service. /CP
+
 dogstatsd-ruby
 ==============
 
