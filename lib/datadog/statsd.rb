@@ -377,17 +377,17 @@ module Datadog
 
     private
 
-    NEW_LINE = "\n".freeze
-    ESC_NEW_LINE = "\\n".freeze
-    COMMA = ",".freeze
-    PIPE = "|".freeze
-    DOT = ".".freeze
-    DOUBLE_COLON = "::".freeze
-    UNDERSCORE = "_".freeze
-    PROCESS_TIME_SUPPORTED = (RUBY_VERSION >= "2.1.0")
-    EMPTY_OPTIONS = {}.freeze
+    NEW_LINE = "\n"
+    ESC_NEW_LINE = "\\n"
+    COMMA = ","
+    PIPE = "|"
+    DOT = "."
+    DOUBLE_COLON = "::"
+    UNDERSCORE = "_"
+    PROCESS_TIME_SUPPORTED = false
+    EMPTY_OPTIONS = {}
 
-    private_constant :NEW_LINE, :ESC_NEW_LINE, :COMMA, :PIPE, :DOT,
+    constant :NEW_LINE, :ESC_NEW_LINE, :COMMA, :PIPE, :DOT,
       :DOUBLE_COLON, :UNDERSCORE, :EMPTY_OPTIONS
 
     def format_service_check(name, status, opts=EMPTY_OPTIONS)
