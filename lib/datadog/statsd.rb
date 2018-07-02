@@ -167,11 +167,11 @@ module Datadog
     def initialize(
       host = nil,
       port = nil,
-      namespace: nil,
-      tags: nil,
-      max_buffer_bytes: 8192,
-      socket_path: nil,
-      logger: nil
+      namespace = nil,
+      tags = nil,
+      max_buffer_bytes = 8192,
+      socket_path = nil,
+      logger = nil
     )
       @connection = Connection.new(host, port, socket_path, logger)
       @logger = logger
