@@ -494,7 +494,6 @@ module Datadog
     end
 
     def send_stat(message)
-      puts message
       if @batch_nesting_depth > 0
         message_bytes = message.bytesize
         unless @buffer_bytes == 0
